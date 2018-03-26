@@ -2,7 +2,7 @@
 #
 #源码安装python
 
-yum -y install wget zlib*
+yum -y install wget gcc zlib*
 python_url=https://www.python.org/ftp/python/3.6.4/Python-3.6.4.tgz
 install_dir=/app/install
 python=/usr/bin/python
@@ -21,3 +21,5 @@ if [ -f $python ];then
 	mv $python $python\.bak
 fi
 ln -s $python_dir/python $python
+
+rm -rf /app/install
